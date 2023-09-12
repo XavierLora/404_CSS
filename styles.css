@@ -1,0 +1,106 @@
+html { height: 100% }
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100%;
+    font-family: 'Agdasima', sans-serif;
+    overflow-x: hidden;
+    color: white;
+}
+div{
+    overflow: hidden;
+    white-space: nowrap;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.navbarContainer{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 15vh;
+    justify-content: flex-start;
+    gap: 2vh;
+    align-items: center;
+    z-index: 1;
+}
+#navbarLogo{
+    -webkit-mask-image: linear-gradient(to bottom,black 10%,transparent 90%);
+    mask-image: linear-gradient(to bottom,black 10%,transparent 90%);
+    filter: invert(100%);
+}
+.navText{
+    font-size: 4vh;
+}
+#navTextContainer{
+    display: inherit;
+    gap: 1.5vh;
+}
+.pageWrapper{
+    position: absolute;
+    top: 0;
+    left:0;
+    background-color: #151f20;
+    background-position: 50%;
+    background-size: cover;
+    min-height: 100%;
+    max-height: 99vh;
+    width: 100%;
+    z-index: 0;
+}
+#backgroundPhoto{
+    background-image: url("https://demos.creative-tim.com/paper-kit-2-pro/assets/img/sections/pk-pro-cover.jpg");
+}
+.pageBody{
+    position: relative;
+    top: 10vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: [first]10% [second]80% [third]10%[fourth];
+    grid-template-rows: [first]2vh[second] 10vh [third]6vh[fourth]45vh[fifth] 40vh[sixth]7vh[last];
+}
+.pageBody h1{
+    font-size: 10vh;
+    grid-column-start: second;
+    grid-column-end: third;
+    grid-row-start: second;
+    grid-row-end: third;
+    place-self: center;
+    font-weight: 600;
+}
+.pageBody h2{
+    font-size: 5vh;
+    grid-column-start: second;
+    grid-column-end: third;
+    grid-row-start: third;
+    grid-row-end: fourth;
+    place-self: center;
+    font-weight: 300;
+}
+.pageBody h3{
+    font-size: 50vh;
+    font-weight: 900;
+    grid-column-start: second;
+    grid-column-end: third;
+    grid-row-start: fourth;
+    grid-row-end: fifth;
+    align-self: center;
+    justify-self: center;
+    letter-spacing: 4vh;
+}
+.pageBody h4{
+    font-size: 5vh;
+    grid-column-start: second;
+    grid-column-end: third;
+    grid-row-start: fifth;
+    grid-row-end: sixth;
+    align-self: start;
+    justify-self: center;
+    font-weight: 200;
+}
+
+#debug{
+    border: medium solid red;
+}
