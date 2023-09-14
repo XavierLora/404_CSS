@@ -1,3 +1,9 @@
+:root{
+    --navblue:#264b5d; 
+    --white: #FFFFFF;
+    --black: #000000;
+    --grey: #B2BEB5;
+}
 html { height: 100% }
 body{
     margin: 0;
@@ -6,7 +12,7 @@ body{
     min-height: 100%;
     font-family: 'Agdasima', sans-serif;
     overflow-x: hidden;
-    color: white;
+    color: var(--white);
 }
 div{
     overflow: hidden;
@@ -27,9 +33,13 @@ a{
     z-index: 1;
 }
 #navbarLogo{
-    -webkit-mask-image: linear-gradient(to bottom,black 10%,transparent 90%);
-    mask-image: linear-gradient(to bottom,black 10%,transparent 90%);
+    -webkit-mask-image: linear-gradient(to bottom,var(--black) 10%,transparent 90%);
+    mask-image: linear-gradient(to bottom,var(--black) 10%,transparent 90%);
     filter: invert(100%);
+}
+#navLogo{
+    width: 125px;
+    height: 125px;
 }
 .navText{
     font-size: 4vh;
@@ -42,7 +52,6 @@ a{
     position: absolute;
     top: 0;
     left:0;
-    background-color: #151f20;
     background-position: 50%;
     background-size: cover;
     min-height: 100%;
@@ -99,8 +108,39 @@ a{
     align-self: start;
     justify-self: center;
     font-weight: 200;
+    color: var(--grey);
 }
+#messageLink{
+    z-index: 2;
+}
+#homeLink{
+    color: var(--navblue);
+}
+.navText:hover{
+    text-decoration: underline;
+    color: var(--navblue);
+}
+
 
 #debug{
     border: medium solid red;
+}
+
+@media (max-width: 768px){
+    .navText{
+        font-size: 3vh;
+    }
+
+    .pageBody h1{
+        font-size: 6vh;
+    }
+    .pageBody h2{
+        font-size: 3.5vh;
+    }
+    .pageBody h3{
+        font-size: 30vh;
+    }
+    .pageBody h4{
+        font-size: 3vh;
+    }
 }
