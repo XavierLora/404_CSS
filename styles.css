@@ -3,6 +3,7 @@
     --white: #FFFFFF;
     --black: #000000;
     --grey: #B2BEB5;
+    --bblue: #45b3e7;
     --text-shadow: 0px 1.5px 0px rgba(0,0,0,0.1),
     0px 3.5px 2.5px rgba(0,0,0,0.15),
     0px 6px 1px rgba(0,0,0,0.1),
@@ -47,6 +48,7 @@ a{
 }
 .navText{
     font-size: 4rem;
+    transition: color 1.25s;
 }
 #navTextContainer{
     display: inherit;
@@ -122,19 +124,33 @@ a{
     
 }
 #homeLink{
+    color: var(--bblue);
+    transition: color 1.5s;
+}
+#homeLink:hover{
     color: var(--navblue);
 }
 .navText:hover{
     text-decoration: underline;
     color: var(--navblue);
 }
-
+footer{
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    height: 10vh;
+}
+#copyRight{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--grey);
+}
 
 #debug{
     border: medium solid red;
 }
 
-@media (max-width: 768px){
+@media screen and (max-width: 768px){
     .pageBody{
         position: relative;
         top: 10vh;
@@ -144,7 +160,7 @@ a{
         grid-template-rows: [first]2vh[second] 10vh [third]6vh[fourth]40vh[fifth] 40vh[sixth]7vh[last];
     }
     .navText{
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 
     .pageBody h1{
@@ -158,5 +174,31 @@ a{
     }
     .pageBody h4{
         font-size: 3.5rem;
+    }
+}
+@media screen and (max-width: 480px){
+    .pageBody{
+        position: relative;
+        top: 10vh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: [first]10% [second]80% [third]10%[fourth];
+        grid-template-rows: [first]2vh[second] 10vh [third]6vh[fourth]35vh[fifth] 40vh[sixth]7vh[last];
+    }
+    .navText{
+        font-size: 2.5rem;
+    }
+
+    .pageBody h1{
+        font-size: 5rem;
+    }
+    .pageBody h2{
+        font-size: 3rem;
+    }
+    .pageBody h3{
+        font-size: 32.5rem;
+    }
+    .pageBody h4{
+        font-size: 3rem;
     }
 }
