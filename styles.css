@@ -3,10 +3,10 @@
     --white: #FFFFFF;
     --black: #000000;
     --grey: #B2BEB5;
-    --text: 1px 1px 0 rgba(0,0,0,1),
-    -1px 1px 0 rgba(0,0,0,1),
-    1px -1px 0 rgba(0,0,0,1),
-    -1px -1px 0 rgba(0,0,0,1);
+    --text-shadow: 0px 1.5px 0px rgba(0,0,0,0.1),
+    0px 3.5px 2.5px rgba(0,0,0,0.15),
+    0px 6px 1px rgba(0,0,0,0.1),
+    0px 8.5px 7.5px rgba(0,0,0,0.1);
 }
 html { height: 100% }
 body{
@@ -46,7 +46,7 @@ a{
     height: 125px;
 }
 .navText{
-    font-size: 4vh;
+    font-size: 4rem;
 }
 #navTextContainer{
     display: inherit;
@@ -75,16 +75,17 @@ a{
     grid-template-rows: [first]2vh[second] 10vh [third]6vh[fourth]45vh[fifth] 40vh[sixth]7vh[last];
 }
 .pageBody h1{
-    font-size: 10vh;
+    font-size: 10rem;
     grid-column-start: second;
     grid-column-end: third;
     grid-row-start: second;
     grid-row-end: third;
     place-self: center;
     font-weight: 600;
+    text-shadow: var(--text-shadow);
 }
 .pageBody h2{
-    font-size: 5vh;
+    font-size: 5rem;
     grid-column-start: second;
     grid-column-end: third;
     grid-row-start: third;
@@ -93,7 +94,7 @@ a{
     font-weight: 300;
 }
 .pageBody h3{
-    font-size: 50vh;
+    font-size: 50rem;
     font-weight: 900;
     grid-column-start: second;
     grid-column-end: third;
@@ -101,11 +102,11 @@ a{
     grid-row-end: fifth;
     align-self: center;
     justify-self: center;
-    letter-spacing: 4vh;
+    letter-spacing: 2vw;
     opacity: 0.65;
 }
 .pageBody h4{
-    font-size: 5vh;
+    font-size: 5rem;
     grid-column-start: second;
     grid-column-end: third;
     grid-row-start: fifth;
@@ -117,7 +118,7 @@ a{
 }
 #messageLink{
     z-index: 2;
-    text-shadow: var(--text);
+    text-shadow: var(--text-shadow);
     
 }
 #homeLink{
@@ -134,20 +135,28 @@ a{
 }
 
 @media (max-width: 768px){
+    .pageBody{
+        position: relative;
+        top: 10vh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: [first]10% [second]80% [third]10%[fourth];
+        grid-template-rows: [first]2vh[second] 10vh [third]6vh[fourth]40vh[fifth] 40vh[sixth]7vh[last];
+    }
     .navText{
-        font-size: 3vh;
+        font-size: 3.5rem;
     }
 
     .pageBody h1{
-        font-size: 6vh;
+        font-size: 7rem;
     }
     .pageBody h2{
-        font-size: 3.5vh;
+        font-size: 3.5rem;
     }
     .pageBody h3{
-        font-size: 30vh;
+        font-size: 40rem;
     }
     .pageBody h4{
-        font-size: 3vh;
+        font-size: 3.5rem;
     }
 }
